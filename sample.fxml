@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Label text="Phone Book">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPaneAdding" prefHeight="214.0" prefWidth="664.0">
+         <content>
+            <VBox fx:id="phoneList" prefHeight="58.0" prefWidth="370.0" />
+         </content>
+      </ScrollPane>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="664.0">
+               <children>
+                  <Label text="Contact Name:      " />
+                  <TextField fx:id="cNameText" prefHeight="26.0" prefWidth="100.0" />
+                  <Label text="        Search contact number by name:   " />
+                  <TextField fx:id="searchNameText" prefHeight="26.0" prefWidth="90.0" />
+                  <Label text="   " />
+                  <Button mnemonicParsing="false" onAction="#ClickSearch" text="Search" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="664.0">
+               <children>
+                  <Label text="Phone Number:    " />
+                  <TextField fx:id="pNumberText" prefHeight="26.0" prefWidth="101.0" />
+                  <Label fx:id="SearchResultTextLabel" text="                                      Search Result:    " />
+               </children>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="664.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#InsClick" text="Insert" />
+                  <Button mnemonicParsing="false" onAction="#rmvClick" text="remove">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="96.0" prefWidth="664.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ClickSave" text="Save PhoneBook" />
+                  <Button mnemonicParsing="false" onAction="#ClickLoad" text="Load PhoneBook">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
